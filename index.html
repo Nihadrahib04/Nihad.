@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+	<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Şəxsi Sayt - Mühasib & Satış </title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+  </style>
+  <style>
+  html {
+    scroll-behavior: smooth;
+  }
+  .fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s ease forwards;
+  }
+  @keyframes fadeUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+
+</head>
+<body class="bg-gradient-to-br from-purple-700 via-indigo-800 to-gray-900 text-white font-sans">
+<!-- FontAwesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+<!-- Sosial Medya Düymələri -->
+<div id="socialButtons" class="fixed bottom-6 right-6 flex flex-col gap-3 opacity-0 scale-75 transition-all duration-700 hidden z-50">
+  
+  <!-- LinkedIn -->
+  <a href="https://www.linkedin.com/in/nihad-elekberov-3582202bb?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"
+     class="bg-white text-blue-700 text-xl p-4 rounded-full shadow-lg border border-blue-300
+            hover:bg-blue-100 hover:scale-110 transition duration-300">
+    <i class="fab fa-linkedin-in animate-pulse"></i>
+  </a>
+
+  <!-- Facebook -->
+  <a href="https://www.facebook.com/share/15HtHJeAVL/" target="_blank"
+     class="bg-white text-blue-600 text-xl p-4 rounded-full shadow-lg border border-blue-300
+            hover:bg-blue-100 hover:scale-110 transition duration-300">
+    <i class="fab fa-facebook-f animate-pulse"></i>
+  </a>
+</div>
+<!-- FontAwesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+<!-- Üst Popup Mesaj -->
+<div id="topNihad" class="fixed top-6 right-1/2 translate-x-1/2 bg-purple-100 text-purple-800 px-4 py-2 rounded-full shadow-md flex items-center gap-2 opacity-0 -translate-y-6 transition-all duration-700 z-50 text-sm">
+  <i class="fas fa-search animate-pulse text-purple-600"></i>
+  <span id="topText" class="font-medium"></span>
+</div>
+
+<!-- Aşağı sürüşdür işarəsi -->
+<div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-40">
+  <div class="text-purple-600 text-2xl animate-bounce">
+    <i class="fas fa-angle-down"></i>
+  </div>
+</div>
+
+<!-- Səs -->
+<audio id="topSound" src="https://www.myinstants.com/media/sounds/notification-sound.mp3" preload="auto"></audio>
+
+<!-- JS -->
+<script>
+  const popup = document.getElementById("topNihad");
+  const text = document.getElementById("topText");
+  const sound = document.getElementById("topSound");
+
+  const message = "Nihadı axtarırsan? Aşağı sürüşdür...";
+  let index = 0;
+
+  function typeLetter() {
+    if (index < message.length) {
+      text.textContent += message.charAt(index);
+      index++;
+      setTimeout(typeLetter, 50);
+    }
+  }
+
+  // Göstərmə
+  setTimeout(() => {
+    popup.classList.remove("opacity-0", "-translate-y-6");
+    popup.classList.add("opacity-100", "translate-y-0");
+    sound.play();
+    typeLetter();
+  }, 1000);
+
+  // Gizlətmə
+  setTimeout(() => {
+    popup.classList.remove("opacity-100", "translate-y-0");
+    popup.classList.add("opacity-0", "-translate-y-6");
+  }, 6000);
+</script>
+<!-- JavaScript -->
+<script>
+  const socialBtns = document.getElementById("socialButtons");
+
+  setTimeout(() => {
+    socialBtns.classList.remove("hidden", "opacity-0", "scale-75");
+    socialBtns.classList.add("opacity-100", "scale-100");
+  }, 7000); // 7 saniyə sonra görün
+</script>
+  <!-- Hero Section -->
+  <section class="min-h-screen flex flex-col justify-center items-center text-center px-4 relative overflow-hidden">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 animate-bounce">Salam, mən <br>Nihad</h1>
+    <p class="text-lg md:text-xl opacity-90 mb-6">Satış və Maliyyə </p>
+    <div class="flex gap-4">
+ <a href="https://drive.google.com/file/d/1cIyj3xrDs6w-hzjWYmw9L5nII-liZa08/view?usp=drivesdk" target="_blank" class="bg-white text-purple-700 font-bold px-6 py-3 rounded-full hover:bg-purple-100 transition">
+  <i class="fas fa-file-alt mr-2"></i> CV-ni Yüklə
+</a>
+      <a href="https://wa.me/994517170017" target="_blank" class="bg-green-500 text-white px-6 py-3 rounded-full hover:bg-green-600 transition">
+        <i class="fab fa-whatsapp mr-2"></i> WhatsApp
+      </a>
+    </div>
+    
+
+
+  </section>
+<section class="text-white py-20 px-6">
+<h2 class="text-4xl font-bold text-center mb-2 tracking-wide">Bloqlarım</h2>
+<p class="text-sm text-center text-white/70 italic mb-10">Fikirlərimlə tanış olmaq üçün bloqlardan birinə toxun.</p>
+
+  <div class="relative">  
+  	
+  	
+    <!-- Karusel konteyneri -->  
+    <div id="carousel" class="flex overflow-x-auto gap-6 snap-x snap-mandatory scroll-smooth pb-4">  
+
+      <div onclick="openModal('modal1')" class="min-w-[280px] bg-gradient-to-br from-purple-700 to-indigo-800 rounded-2xl p-6 shadow-xl snap-center hover:scale-[1.03] transition-transform cursor-pointer">
+        <h3 class="text-xl font-semibold mb-2">Tələbə olanda debat yarışında belə bir mövzu düşmüşdü</h3>  
+        <p class="text-sm text-white/90"> “Universitetlərin regionlara köçürülməsi müsbət nəticə verər, yoxsa mənfi?”</p>  
+      </div>  
+
+      <div onclick="openModal('modal2')" class="min-w-[280px] bg-gradient-to-br from-blue-700 to-indigo-600 rounded-2xl p-6 shadow-xl snap-center hover:scale-[1.03] transition-transform cursor-pointer">  
+        <h3 class="text-xl font-semibold mb-2">Menecerlərə məktub</h3>  
+        <p class="text-sm text-white/90">"Qayda hamı üçün qayda olmalıdır ! "</p>  
+      </div>  
+
+      <div onclick="openModal('modal3')" class="min-w-[280px] bg-gradient-to-br from-pink-700 to-purple-600 rounded-2xl p-6 shadow-xl snap-center hover:scale-[1.03] transition-transform cursor-pointer">  
+        <h3 class="text-xl font-semibold mb-2">UI/UX və İT sahəsi haqqında bir az düşünək...
+        <p class="text-sm text-white/90">Bu gün qarşıma belə bir xəbər çıxdı:
+"Azərbaycanda 200 min nəfərə yaxın İT mütəxəssisi çatışmır"</p>  
+      </div>  
+
+      <div onclick="openModal('modal4')" class="min-w-[280px] bg-gradient-to-br from-green-700 to-emerald-600 rounded-2xl p-6 shadow-xl snap-center hover:scale-[1.03] transition-transform cursor-pointer">  
+        <h3 class="text-xl font-semibold mb-2">Çin gəlir..</h3>  
+        <p class="text-sm text-white/90">Gərək Çin dili öyrənək :))</p>  
+      </div>  
+    </div>  
+  </div>  
+</section>
+
+<!-- Modal 1 -->
+<div id="modal1" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center">
+  <div class="bg-white text-black rounded-xl p-6 max-w-md w-[90%] relative shadow-lg animate-fade-in-up max-h-[80vh] overflow-y-auto">
+    <button onclick="closeModal('modal1')" class="absolute top-3 right-4 text-2xl font-bold text-gray-600">&times;</button>
+    <h3 class="text-xl font-bold mb-3"> “Universitetlərin regionlara köçürülməsi müsbət nəticə verər, yoxsa mənfi?”</h3>
+    <p class="text-sm leading-relaxed">
+      O vaxt sadəcə müzakirə edirdik...
+<br><br>
+İndi isə həyatı.. şəhərləri.. insanları daha yaxşı müşahidə etdikcə görürəm , bu sual hələ də aktualdır...
+<br><br>
+Mövzu sadə səslənsə də, arxasında çox mürəkkəb sosial, iqtisadi və mədəni qatlar var ...
+<br><br>
+Biri deyirdi: “Region canlansa, Bakı nəfəs alar...”
+Digəri deyirdi: “Keyfiyyət mərkəzdə formalaşır, onu parçalamaq risklidir”
+<br><br>
+Yaxşı indidə belə bir sual yaranır..
+Bəs biz bu tarazlığı necə qura bilərik..?!
+<br><br>
+Bir universitet təkcə bina deyil..Universitet açılan yerdə həyat başlayır... 
+<br><br>
+Orda tələbə gəlir.. müəllim gəlir.. taksi sayında artım olur.. avtobus marşrutları düzəlir.. kafedə iş oyanır.. yeməkxana açılır.. kirayə evlərin qiyməti qalxır.. amma eyni zamanda kirayə verən kənd adamının da cibinə də pul girir.  Hətta kitab dükanı, geyim mağazası,  foto aparatı olan bir dükan belə iş görməyə başlayır...
+<br><br>
+Yəni bir universitet təkcə təhsil deyil – həyat gətirir..
+<br><br>
+Amma əlbəttə..
+<br><br>
+bu işlər düzgün planlanmasa, nəticə əks də ola bilər.. Sadəcə adını regiona köçürüb, içini boş qoysaq.. nə tələbə razı qalacaq.. nə yerli əhali..
+<br><br>
+Tələbə şəhəri anlayışı təkcə Bakı üçün olmamalıdır.!
+<br><br>
+Amma bu iş elə-belə də olmur axıı..
+<br><br>
+Sadəcə bina tikib adını “universitet” qoymaqla olmur. 
+<br><br>
+Əgər keyfiyyətli müəllim.. dolğun proqram.. normal yataqxana və düzgün idarəçilik yoxdursa –  Nə tələbə ora getmək istəməyəcək.! Nə də orda qalmaq.!
+<br><br>
+Universitet köçürmək yox.. həyat köçürmək lazımdır
+<br><br>
+Əgər bunu bacara bilsək .. bu köçün adı dəyişir.. “inkişaf” olur )
+  </div>
+</div>
+
+<!-- Modal 2 -->
+<div id="modal2" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center">
+  <div class="bg-white text-black rounded-xl p-6 max-w-md w-[90%] relative shadow-lg animate-fade-in-up max-h-[80vh] overflow-y-auto">
+    <button onclick="closeModal('modal2')" class="absolute top-3 right-4 text-2xl font-bold text-gray-600">&times;</button>
+    <h3 class="text-xl font-bold mb-3">"Qayda hamı üçün qayda olmalıdır ! "</h3>
+    <p class="text-sm leading-relaxed">
+      Bu gün belə bir söz oxudum:
+Cəfər Cabbarlı deyir ki..
+hər söz qanun, hər şey həqiqət olsun.
+<br><br>
+Fikirləşdim ki, bu iş yerlərində də belə olsa çox yaxşı olar.)
+<br><br>
+Sizdə belə düşünürsünüz?!
+<br><br>
+Çox yerdə görürəm..
+Bir menecer bir söz deyir, başqa biri tamam başqa şey
+İşçi də bilmir kimin sözünə qulaq assın, nə etsin..
+<br><br>
+ Yeni biri gəlir  yeni qayda gətirir...
+<br><br>
+Hər gələn öz qaydasını gətirsə,
+iş prinsipi,  vəzifə borcu , subordinasiya qalar qıraqda
+<br><br>
+Belə olanda işçilər öyrəşə bilmir və kollektiv də pozulur ..
+<br><br>
+Əgər bir yerdə işləyiriksə, hamıya eyni qayda tətbiq olunmalıdır.!
+<br><br>
+Menecer də, işçi də bilməlidir ki, bu sistem mənim istəyimlə yox..ümumi prinsipə əsaslanır
+<br><br>
+Hörmətli Menecerlər,
+<br><br>
+İdarəetmədə ardıcıllıq və dürüstlük yoxdursa, inanın orada nə inkişaf olar, nə də kollektiv..
+    </p>
+  </div>
+</div>
+
+<!-- Modal 3 -->
+<div id="modal3" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center">
+  <div class="bg-white text-black rounded-xl p-6 max-w-md w-[90%] relative shadow-lg animate-fade-in-up max-h-[80vh] overflow-y-auto">
+    <button onclick="closeModal('modal3')" class="absolute top-3 right-4 text-2xl font-bold text-gray-600">&times;</button>
+    <h3 class="text-xl font-bold mb-3">UI/UX və İT sahəsi haqqında bir az düşünək...</h3>
+    <p class="text-sm leading-relaxed">
+   
+Bu gün qarşıma belə bir xəbər çıxdı:
+"Azərbaycanda 200 min nəfərə yaxın İT mütəxəssisi çatışmır"
+<br><br>
+Bu xəbəri oxuyanda bir az düşünməyə qərar verdim..
+<br><br>
+2024-2025 ci il üzrə 1-ci ixtisas qrupunda (mühəndislik, texnologiya və IT ixtisasları daxil olmaqla) 19.990 plan yeri ayrıldığı bildirilib , həmçinin nəzərə alsaq ki , Azərbaycanda hal-hazırda minimum 50 tədris kursuda  var..
+<br><br>
+Bəs görəsən bu qədər oxuyan , kurs bitirən varsa axı niyə 200 min ?!
+<br><br>
+Mən İT sahəsində deyiləm..
+<br><br>
+Ancaq son zamanlar görürəm ki, hər kəs ya proqramçı, ya da UI/UX dizayner olmaq istəyir, lakin bir çoxunun kompüterdə elementar bilikləri belə yoxdur. 
+<br><br>
+Bəli, İT sahəsində böyük bir boşluq var. Amma bu, o demək deyil ki, hər kurs bitirən asanlıqla iş tapa bilir.
+<br><br>
+İndi minlərlə kurs bitirmiş, amma təəssüf ki, real bilik və bacarığı olmayan insan iş axtarır. 
+<br><br>
+Azərbaycanda cari vəziyyətə baxsaq  İT sektorunda çalışanların sayı 33,700 nəfərə çatıb və orta əməkhaqqı 1,700 AZN-dir.
+<br><br>
+Hər yerdə "1 ayda proqramçı ol", "2 ayda 2000 AZN qazan" kimi reklamlar görürəm. Bəs sizcə bu realdır?!
+<br><br>
+İT - yüksək maaş, qlobal iş imkanları və uzaqdan işləmək azadlığı ilə çox möhtəşəmdir...Ancaq bu sahədə , sadəcə bir neçə ay kursa gedib yüksək maaş qazanmaq o qədərdə asan  deyil...
+<br><br>
+Yüksək maaş yalnız yüksək bacarıq və real təcrübə tələb edir.
+<br><br>
+"Qabın nədirsə, aşın da odur."
+<br><br>
+İstərsən sahəni dəyiş, istərsən yeni bir işə başla — əvvəlcə nə istədiyini bil, məqsədin olsun və bu yolda əziyyət çəkməyə hazır ol..
+<br><br>
+Siz necə düşünürsünüz? Pul xətrinə sahə dəyişmək doğrudurmu?
+    </p>
+  </div>
+</div>
+<!-- Modal 4 -->
+<div id="modal4" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center">
+  <div class="bg-white text-black rounded-xl p-6 max-w-md w-[90%] relative shadow-lg animate-fade-in-up max-h-[80vh] overflow-y-auto">
+    <button onclick="closeModal('modal4')" class="absolute top-3 right-4 text-2xl font-bold text-gray-600">&times;</button>
+    <h3 class="text-xl font-bold mb-3"> Çin gəlir.. 
+Gərək Çin dili öyrənək :))</h3>
+    <p class="text-sm leading-relaxed">
+2024-də 26 866 nəfər idilər.
+2025-in əvvəlində bu rəqəm 1.8 dəfə artdı.
+2024-ün  Yanvar ayı 1206 ,
+2025- in Yanvar ayı 2603..
+<br><br>
+Birbaşa Bakı–Pekin uçuşları həftədə 6-7 dəfə oldu, viza prosesi də sadələşdi. ( 2023 də Həftədə 2 dəfə idi )
+<br><br>
+Nəticə? — Çin bazarı artıq Azərbaycan üçün "potensial" deyil, "real" statistikadır.
+<br><br>
+Söz yox, bu artım təkcə turizm deyil, bir çox sahəyə təsir edəcək.
+<br><br>
+Görək davamı necə gəlir...
+  </p>
+  </div>
+</div>
+
+
+
+<!-- JS funksiyalar -->
+<script>
+  function openModal(id) {
+    document.getElementById(id).classList.remove('hidden');
+  }
+
+  function closeModal(id) {
+    document.getElementById(id).classList.add('hidden');
+  }
+
+  // Avtosürüşmə funksiyası
+  const carousel = document.getElementById('carousel');
+  let scrollAmount = 0;
+
+  setInterval(() => {
+    const maxScrollLeft = carousel.scrollWidth - carousel.clientWidth;
+
+    if (scrollAmount >= maxScrollLeft) {
+      scrollAmount = 0;
+    } else {
+      scrollAmount += 300; // Təxmini bir kartın eni
+    }
+
+    carousel.scrollTo({
+      left: scrollAmount,
+      behavior: 'smooth'
+    });
+  }, 3000);
+</script>
+
+<!-- Animasiya -->
+<style>
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .animate-fade-in-up {
+    animation: fade-in-up 0.3s ease-out;
+  }
+</style>
+<section class="py-20 bg-white text-gray-800 px-6">
+  <h2 class="text-3xl font-bold text-center mb-16 text-indigo-900">Təhsil</h2>
+  
+  <div class="max-w-3xl mx-auto space-y-6 border-l-4 border-indigo-400 pl-6">
+    
+    <!-- UNEC -->
+    <div class="relative group">
+      <div class="absolute -left-3 top-1.5 w-5 h-5 bg-indigo-500 rounded-full border-4 border-white shadow-md"></div>
+      <div class="bg-indigo-50 rounded-xl p-4 hover:shadow-lg transition">
+        <h3 class="text-lg font-bold text-indigo-800">Azərbaycan Dövlət İqtisad Universiteti</h3>
+        <p class="text-sm text-gray-700 font-semibold">Mühasibat </p>
+        <div class="flex justify-between text-sm text-gray-600 mt-1">
+          <span>2024 - 2029</span>
+          <span>Qiyabi</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quba Dövlət Sosial İqtisad Kolleci -->
+    <div class="relative group">
+      <div class="absolute -left-3 top-1.5 w-5 h-5 bg-indigo-500 rounded-full border-4 border-white shadow-md"></div>
+      <div class="bg-indigo-50 rounded-xl p-4 hover:shadow-lg transition">
+        <h3 class="text-lg font-bold text-indigo-800">Quba Dövlət Sosial İqtisad Kolleci</h3>
+        <p class="text-sm text-gray-700 font-semibold"> Maliyyə </p>
+        <div class="flex justify-between text-sm text-gray-600 mt-1">
+          <span>2019-2022</span>
+          <span>Əyani</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<section class="py-20 bg-gray-100 text-gray-800 px-6">
+  <h2 class="text-3xl font-bold text-center mb-12">İş Təcrübələrim</h2>
+  <div class="max-w-4xl mx-auto space-y-8">
+
+    <!-- Deluxe -->
+    <div class="bg-white p-6 rounded-2xl shadow-md border border-purple-100 hover:shadow-lg transition">
+      <div class="flex items-start gap-4">
+        <img src="img/deluxe.png" alt="Deluxe Park Qusar Hotel" class="w-14 h-14 rounded-full object-cover border border-gray-300">
+        <div class="flex-1">
+          <h3 class="text-xl font-bold text-purple-800">Deluxe Park Qusar Hotel</h3>
+          <p class="text-md text-gray-700 font-semibold">Qeydiyyatçı (FO - SPA)</p>
+          <div class="flex items-center text-sm text-gray-500 mt-1">
+            <svg class="w-4 h-4 mr-1 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M6 2a1 1 0 00-1 1v1H5a3 3 0 00-3 3v1h16V7a3 3 0 00-3-3h-.002V3a1 1 0 00-1-1H6zM2 9v7a3 3 0 003 3h10a3 3 0 003-3V9H2z"/>
+            </svg>
+            2024 - Davam edir
+          </div>
+          <ul class="list-disc pl-5 mt-3 text-sm text-gray-700 space-y-1">
+            <li>Qonaqları qarşılamaq, otaqları müəyyən etmək, açarları təqdim etmək, qonaqların ödənişlərini toplamaq.</li>
+            <li>Qonaqların hoteli tərk etdiyi zaman onların yekun fakturasını hesablamaq və ödənişləri toplamaq.</li>
+            <li>Bütün qonaqlar və daxili müştərilərin şikayət və sorğularına nəzakətlə və effektiv şəkildə cavab vermək </li>
+            <li>Qonaqlara dair arxiv sənədlərinin səliqəli ilə aparılmasını və təkrar qonaqların əvvəlcədən qeydiyyata alınmasını təmin etmək.</li>
+            <li>SPA satışlarının icrası, kassa əməliyyatları , gündəlik hesabatların hazırlanması </li>        
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Avrora -->
+    <div class="bg-white p-6 rounded-2xl shadow-md border border-purple-100 hover:shadow-lg transition">
+      <div class="flex items-start gap-4">
+        <img src="img/avrora.png" alt="Avrora MMC" class="w-14 h-14 rounded-full object-cover border border-gray-300">
+        <div class="flex-1">
+          <h3 class="text-xl font-bold text-purple-800">Avrora MMC</h3>
+          <p class="text-md text-gray-700 font-semibold">Satış Nümayəndəsi</p>
+          <div class="flex items-center text-sm text-gray-500 mt-1">
+            <svg class="w-4 h-4 mr-1 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M6 2a1 1 0 00-1 1v1H5a3 3 0 00-3 3v1h16V7a3 3 0 00-3-3h-.002V3a1 1 0 00-1-1H6zM2 9v7a3 3 0 003 3h10a3 3 0 003-3V9H2z"/>
+            </svg>
+            2024
+          </div>
+          <ul class="list-disc pl-5 mt-3 text-sm text-gray-700 space-y-1">
+            <li>Müştərilərlə ünsiyyət qurmaq, şirkətin məhsullarını müştərilərə təqdim etmək</li>
+            <li>Şirkət məhsullarının isti və soyuq satışını həyata keçirmək;</li>
+            <li>Yeni müştərilərin tapılması və partnyor şəbəkəsinə daxil edilməsi</li>
+            <li>Vaxtlı-vaxtında müştəriləri ziyarət etmək və sifarişlər götürmək;</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tamasha -->
+    <div class="bg-white p-6 rounded-2xl shadow-md border border-purple-100 hover:shadow-lg transition">
+      <div class="flex items-start gap-4">
+        <img src="img/tamasha.png" alt="Tamasha / MiAD Foods MMC" class="w-14 h-14 rounded-full object-cover border border-gray-300">
+        <div class="flex-1">
+          <h3 class="text-xl font-bold text-purple-800">Tamasha / MiAD Foods MMC</h3>
+          <p class="text-md text-gray-700 font-semibold">Merçendayzer</p>
+          <div class="flex items-center text-sm text-gray-500 mt-1">
+            <svg class="w-4 h-4 mr-1 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M6 2a1 1 0 00-1 1v1H5a3 3 0 00-3 3v1h16V7a3 3 0 00-3-3h-.002V3a1 1 0 00-1-1H6zM2 9v7a3 3 0 003 3h10a3 3 0 003-3V9H2z"/>
+            </svg>
+            2024
+          </div>
+          <ul class="list-disc pl-5 mt-3 text-sm text-gray-700 space-y-1">
+            <li>Təyin olunmuş gündəlik rut üzrə hərəkət etmək </li>
+            <li>Rəflərdə şirkət məhsullarının tələblərə uyğun olaraq düzgün düzülüşünü təmin etmək </li>
+            <li>Malların istehsal tarixlərinə və əmtəə görünüşə nəzarət</li>
+            <li>Qiymət dəyişiklərinə nəzarət etmək</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<section class="py-24 bg-gradient-to-br from-indigo-50 via-white to-purple-100 px-6 text-gray-800">
+  <h2 class="text-4xl font-bold text-center mb-16 tracking-wide">Kurslar & Sertifikatlar</h2>
+  <div class="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+
+<!-- Kurs 1 -->
+<div class="backdrop-blur-sm bg-white/40 border border-white/30 shadow-xl rounded-3xl p-6 hover:scale-[1.02] transition-all duration-500 relative overflow-hidden group">
+  <div class="flex items-center gap-4 mb-4">
+    <div class="bg-purple-600 text-white p-3 rounded-full shadow-lg group-hover:rotate-[20deg] transition-all duration-500">
+      <i class="fas fa-file-invoice-dollar text-xl"></i> <!-- Mühasibatlıq üçün -->
+    </div>
+    <div>
+      <h3 class="text-xl font-semibold">"1C Mühasibatlıq "</h3>
+      <p class="text-sm text-gray-700"> Diamond Academy – 2025</p>
+    </div>
+  </div>
+  <a href="html/nihad/1c-kurs.pdf" target="_blank" class="inline-block mt-2 text-purple-700 font-medium hover:underline">Sertifikata bax</a>
+</div>
+
+<!-- Kurs 2 -->
+<div class="backdrop-blur-sm bg-white/40 border border-white/30 shadow-xl rounded-3xl p-6 hover:scale-[1.02] transition-all duration-500 relative overflow-hidden group">
+  <div class="flex items-center gap-4 mb-4">
+    <div class="bg-blue-600 text-white p-3 rounded-full shadow-lg group-hover:rotate-[20deg] transition-all duration-500">
+      <i class="fas fa-briefcase text-xl"></i> <!-- Təcrübə üçün -->
+    </div>
+    <div>
+      <h3 class="text-xl font-semibold">“Mühasibatlıq Təcrübə Proqramı”</h3>
+      <p class="text-sm text-gray-700">ADA MMC – 2021</p>
+    </div>
+  </div>
+  <a href="html/nihad/satis-kurs.pdf" target="_blank" class="inline-block mt-2 text-blue-700 font-medium hover:underline">Sertifikata bax</a>
+</div>
+
+<!-- Kurs 3 -->
+<div class="backdrop-blur-sm bg-white/40 border border-white/30 shadow-xl rounded-3xl p-6 hover:scale-[1.02] transition-all duration-500 relative overflow-hidden group">
+  <div class="flex items-center gap-4 mb-4">
+    <div class="bg-yellow-600 text-white p-3 rounded-full shadow-lg group-hover:rotate-[20deg] transition-all duration-500">
+      <i class="fas fa-bullhorn text-xl"></i> <!-- Marketinq üçün -->
+    </div>
+    <div>
+      <h3 class="text-xl font-semibold">“Satış və Marketinq Kursu”</h3>
+      <p class="text-sm text-gray-700">Prospect Academy – 2025</p>
+    </div>
+  </div>
+  <a href="html/nihad/vergi-sertifikat.pdf" target="_blank" class="inline-block mt-2 text-yellow-700 font-medium hover:underline">Sertifikata bax</a>
+</div>
+
+<!-- Kurs 4 -->
+<div class="backdrop-blur-sm bg-white/40 border border-white/30 shadow-xl rounded-3xl p-6 hover:scale-[1.02] transition-all duration-500 relative overflow-hidden group">
+  <div class="flex items-center gap-4 mb-4">
+    <div class="bg-teal-600 text-white p-3 rounded-full shadow-lg group-hover:rotate-[20deg] transition-all duration-500">
+      <i class="fas fa-building text-xl"></i> <!-- ASAN Xidmət üçün ümumi dövlət/ictimai ikon -->
+    </div>
+    <div>
+      <h3 class="text-xl font-semibold">“Təcrübə Proqramı”</h3>
+      <p class="text-sm text-gray-700">ASAN Xidmət – 2021</p>
+    </div>
+  </div>
+  <a href="html/nihad/vergi-sertifikat.pdf" target="_blank" class="inline-block mt-2 text-teal-700 font-medium hover:underline">Sertifikata bax</a>
+</div>
+
+<!-- Kurs 5 -->
+<div class="backdrop-blur-sm bg-white/40 border border-white/30 shadow-xl rounded-3xl p-6 hover:scale-[1.02] transition-all duration-500 relative overflow-hidden group">
+  <div class="flex items-center gap-4 mb-4">
+    <div class="bg-pink-600 text-white p-3 rounded-full shadow-lg group-hover:rotate-[20deg] transition-all duration-500">
+      <i class="fas fa-hotel text-xl"></i> <!-- Elektra V5 - Otel proqramı üçün uyğun -->
+    </div>
+    <div>
+      <h3 class="text-xl font-semibold">“Ofis Proqramları”</h3>
+      <p class="text-sm text-gray-700">GSSEC – 2021</p>
+    </div>
+  </div>
+  <a href="html/nihad/vergi-sertifikat.pdf" target="_blank" class="inline-block mt-2 text-pink-700 font-medium hover:underline">Sertifikata bax</a>
+</div>
+</section>
+
+<!-- Proqram Bilikləri -->
+	
+<section class="py-20 bg-gray-50 text-gray-800 px-6">
+  <h2 class="text-3xl font-bold text-center mb-12">Proqram Biliklərim</h2>
+  <div class="overflow-x-auto">
+    <div class="flex gap-6 min-w-[800px]">
+
+  <!-- Word -->
+      <div class="bg-white p-6 rounded-xl shadow-md w-72 shrink-0 text-center">
+        <i class="fas fa-file-word text-3xl text-blue-600 mb-2"></i>
+        <h4 class="font-semibold">Microsoft Word</h4>
+        <p>Sənədlərin formatlanması və şablonlarla iş</p>
+        <div class="mt-3 flex justify-center gap-1 text-yellow-400 text-sm">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+      </div>
+
+      <!-- Excel -->
+      <div class="bg-white p-6 rounded-xl shadow-md w-72 shrink-0 text-center">
+        <i class="fas fa-file-excel text-3xl text-green-600 mb-2"></i>
+        <h4 class="font-semibold">Microsoft Excel</h4>
+        <p>Ətraflı biliklər, formulalar və Pivot Table</p>
+        <div class="mt-3 flex justify-center gap-1 text-yellow-400 text-sm">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <button onclick="toggleCert('cert1')" class="mt-3 text-sm text-purple-600 hover:underline">Ətraflı bax</button>
+        <div id="cert1" class="hidden mt-3 text-sm bg-gray-100 p-3 rounded">
+          <p><strong>Sertifikat:</strong> <a href="html/nihad/excel-certificate.pdf" class="text-blue-600 underline" target="_blank">PDF-i aç</a></p>
+          <p>İrəliləmiş Excel praktikası ilə işləmə bacarığı</p>
+        </div>
+      </div>
+
+      <!-- Outlook -->
+      <div class="bg-white p-6 rounded-xl shadow-md w-72 shrink-0 text-center">
+        <i class="fas fa-envelope text-3xl text-indigo-600 mb-2"></i>
+        <h4 class="font-semibold">Microsoft Outlook</h4>
+        <p>E-mail, təqvim və iş axını idarəsi</p>
+        <div class="mt-3 flex justify-center gap-1 text-yellow-400 text-sm">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+      </div>
+
+      <!-- Elektra V5 -->
+      <div class="bg-white p-6 rounded-xl shadow-md w-72 shrink-0 text-center">
+        <i class="fas fa-hotel text-3xl text-yellow-600 mb-2"></i>
+        <h4 class="font-semibold">Elektra V5</h4>
+        <p>Otel proqramı ilə rezervasiya və idarəetmə</p>
+        <div class="mt-3 flex justify-center gap-1 text-yellow-400 text-sm">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+      </div>
+
+      <!-- Pos V5 -->
+      <div class="bg-white p-6 rounded-xl shadow-md w-72 shrink-0 text-center">
+        <i class="fas fa-cash-register text-3xl text-pink-600 mb-2"></i>
+        <h4 class="font-semibold">POS V5</h4>
+        <p>Satış nöqtəsi idarəetmə sistemi</p>
+        <div class="mt-3 flex justify-center gap-1 text-yellow-400 text-sm">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+      </div>
+
+      <!-- 1C -->
+      <div class="bg-white p-6 rounded-xl shadow-md w-72 shrink-0 text-center">
+        <i class="fas fa-cubes text-3xl text-purple-600 mb-2"></i>
+        <h4 class="font-semibold">1C Mühasibat</h4>
+        <p>Uçot və vergi hesabatlarının aparılması</p>
+        <div class="mt-3 flex justify-center gap-1 text-yellow-400 text-sm">
+          <i class="fas fa-star"></i>
+        </div>
+      </div>
+
+      <!-- ƏMAS -->
+      <div class="bg-white p-6 rounded-xl shadow-md w-72 shrink-0 text-center">
+        <i class="fas fa-id-card text-3xl text-gray-600 mb-2"></i>
+        <h4 class="font-semibold">ƏMAS</h4>
+        <p>Əmək müqavilələrinin elektron idarəsi</p>
+        <div class="mt-3 flex justify-center gap-1 text-yellow-400 text-sm">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+      </div>
+
+      <!-- E-Banking -->
+      <div class="bg-white p-6 rounded-xl shadow-md w-72 shrink-0 text-center">
+        <i class="fas fa-university text-3xl text-blue-700 mb-2"></i>
+        <h4 class="font-semibold">E-Banking</h4>
+        <p>Online bank əməliyyatlarının aparılması</p>
+        <div class="mt-3 flex justify-center gap-1 text-yellow-400 text-sm">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+      </div>
+
+      <!-- Canva -->
+      <div class="bg-white p-6 rounded-xl shadow-md w-72 shrink-0 text-center">
+        <i class="fas fa-paint-brush text-3xl text-pink-500 mb-2"></i>
+        <h4 class="font-semibold">Canva</h4>
+        <p>Dizayn və sosial media vizualları</p>
+        <div class="mt-3 flex justify-center gap-1 text-yellow-400 text-sm">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+      </div>
+  </div>
+
+<script>
+  function toggleCert(id) {
+    const el = document.getElementById(id);
+    el.classList.toggle("hidden");
+  }
+  
+</script>
+      </div>
+      </div>
+  </div>
+<br><br>
+<div class="flex justify-center gap-5 flex-wrap mt-6">
+	
+	<section class="mt-20">
+  <h2 class="text-3xl font-bold text-center mb-10 tracking-wide">Dil Biliklərim</h2>
+
+  <div class="flex justify-center gap-8 flex-wrap text-white text-sm">
+
+    <!-- Azərbaycan dili -->
+    <div class="flex flex-col items-center">
+      <div class="w-24 h-24 rounded-full bg-gradient-to-br from-green-400 to-green-600 text-white flex flex-col items-center justify-center shadow-xl hover:scale-105 transition duration-300">
+        <span class="text-[13px] font-medium">Azərbaycan</span>
+        <span class="text-xs font-light mt-1">Əla</span>
+      </div>
+    </div>
+
+    <!-- Türk dili -->
+    <div class="flex flex-col items-center">
+      <div class="w-24 h-24 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 text-white flex flex-col items-center justify-center shadow-xl hover:scale-105 transition duration-300">
+        <span class="text-[13px] font-medium">Türk</span>
+        <span class="text-xs font-light mt-1">Yaxşı</span>
+      </div>
+    </div>
+
+    <!-- İngilis dili -->
+    <div class="flex flex-col items-center">
+      <div class="w-24 h-24 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-500 text-white flex flex-col items-center justify-center shadow-xl hover:scale-105 transition duration-300">
+        <span class="text-[13px] font-medium">İngilis</span>
+        <span class="text-xs font-light mt-1">Orta</span>
+      </div>
+    </div>
+
+  </div>
+  <br><br>
+</section>
+  <!-- Hərbi Bilet -->
+  <a href="https://drive.google.com/file/d/1cTZUaZhisLE1CnKkC5BA_BroDMjiNQ5z/view?usp=drivesdk" target="_blank" class="flex flex-col items-center group transition duration-300 hover:scale-105">
+    <svg class="w-6 h-6 text-green-600 group-hover:scale-125 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m2 8H7a2 2 0 01-2-2V6a2 2 0 012-2h3l2 2h4a2 2 0 012 2v10a2 2 0 01-2 2z"/>
+    </svg>
+    <span class="mt-1 text-xs text-gray-700 font-medium">Hərbi Bilet</span>
+  </a>
+
+  <!-- Sürücülük Vəsiqəsi -->
+  <a href="https://drive.google.com/file/d/1cY51smTFEytFj56Ig66RGPoIBl74Znnx/view?usp=drivesdk" target="_blank" class="flex flex-col items-center group transition duration-300 hover:scale-105">
+    <svg class="w-6 h-6 text-blue-600 group-hover:scale-125 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18"/>
+    </svg>
+    <span class="mt-1 text-xs text-gray-700 font-medium">Sürücülük Vəsiqəsi</span>
+  </a>
+
+  <!-- Diplom -->
+  <a href="https://drive.google.com/file/d/1caFPEEdr9zxV674yrdBmEeaQ8oLRZVFY/view?usp=drivesdk" target="_blank" class="flex flex-col items-center group transition duration-300 hover:scale-105">
+    <svg class="w-6 h-6 text-purple-600 group-hover:scale-125 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/>
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422A12.083 12.083 0 0120 14.5C20 18.09 16.418 21 12 21s-8-2.91-8-6.5c0-.857.21-1.67.584-2.378L12 14z"/>
+    </svg>
+    <span class="mt-1 text-xs text-gray-700 font-medium">Diplom</span>
+  </a>
+
+  <!-- Motivasiya Məktubu -->
+  <a href="https://drive.google.com/file/d/1WLLf7zWv0EpiRjqq4oXr8ICeac3IBExM/view?usp=drivesdk" target="_blank" class="flex flex-col items-center group transition duration-300 hover:scale-105">
+    <svg class="w-6 h-6 text-red-600 group-hover:scale-125 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-18 8h18a2 2 0 002-2V8a2 2 0 00-2-2H3a2 2 0 00-2 2v6a2 2 0 002 2z"/>
+    </svg>
+    <span class="mt-1 text-xs text-gray-700 font-medium">Motivasiya Məktubu</span>
+  </a>
+</div>
+</div>
+  </div>
+</section>
+
+<script>
+  function toggleCert(id) {
+    const el = document.getElementById(id);
+    el.classList.toggle('hidden');
+  }
+</script>
+
+  <!-- Əlaqə -->
+  <footer class="bg-gray-800 text-center text-white py-6">
+    <p>© 2025 Nihad Rahiboglu. Bütün hüquqlar qorunur.</p>
+  </footer>
+
+</body>
+</html>
